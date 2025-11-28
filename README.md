@@ -47,7 +47,7 @@ I plan to execute these steps to complete my project.
   - Forking the template repository
   - Installing LangChain, LangGraph, LangSmith and a Vector Database
   - Setting up API keys
-- **[TODO] Step 2** involves preparing sample financial data.
+- **[DONE] Step 2** involves preparing sample financial data.
   - Generate sample dataset for someone's financial spendings
 - **[TODO] Step 3** involves building the input and OCR.
   - Create nodes for input, OCR and cleaning the input

@@ -1,0 +1,80 @@
+---------- AUGUST 2025 ----------
+[2025-08-01 09:00] FROM: BankAlert | Acct 1234: Direct Deposit $3,000.00 (PAYROLL). Bal: $4,500.00.
+[2025-08-01 12:30] FROM: 888-999 | Your Uber code is 4492. Do not share.
+[2025-08-02 10:00] FROM: BankAlert | Debit $1,200.00 to LANDLORD_RENT. Bal: $3,300.00.
+[2025-08-03 14:15] FROM: ChaseBank | Trans of $45.50 at SHELL GAS STATION approved.
+[2025-08-05 18:30] FROM: FreshGrocer | Order #991 delivered. Total charge: $112.45.
+[2025-08-07 20:00] FROM: BankAlert | Debit $35.00 at JOE'S PIZZA.
+[2025-08-08 09:15] FROM: Verizon | Bill for Aug ($65.00) is due soon.
+[2025-08-10 11:00] FROM: BankAlert | Debit $15.99 for NETFLIX.
+[2025-08-12 13:45] FROM: Amazon | Your package (Sony Headphones) has arrived.
+[2025-08-12 13:46] FROM: BankAlert | Debit $89.99 at AMAZON MKTPLACE.
+[2025-08-14 19:20] FROM: UberEats | Driver is nearby. Order total: $28.50.
+[2025-08-15 12:00] FROM: PowerComp | Auto-pay: $120.45 deducted for electricity.
+[2025-08-18 08:30] FROM: Gym | Monthly dues $45.00 charged successfully.
+[2025-08-20 16:00] FROM: BankAlert | Debit $210.00 at TICKETMASTER.
+[2025-08-22 19:45] FROM: ChaseBank | You spent $55.00 at TRADER JOES.
+[2025-08-25 10:00] FROM: Stripe | Payout of $500.00 initiated to your account.
+[2025-08-26 14:20] FROM: BankAlert | Credit $500.00 received. Bal: $2,790.00.
+[2025-08-28 21:15] FROM: Lyft | Ride complete. Total: $22.50.
+[2025-08-30 11:30] FROM: BankAlert | Debit $11.99 for SPOTIFY.
+
+---------- SEPTEMBER 2025 ----------
+[2025-09-01 09:00] FROM: BankAlert | Direct Deposit $3,000.00 (PAYROLL).
+[2025-09-02 10:00] FROM: BankAlert | Debit $1,200.00 for RENT_SEPT.
+[2025-09-04 15:30] FROM: UniBookstore | Purchase receipt: $250.00 for TEXTBOOKS.
+[2025-09-05 18:00] FROM: BankAlert | Debit $65.00 for VERIZON WIRELESS.
+[2025-09-07 20:15] FROM: ChaseBank | Alert: Purchase $120.00 at TARGET.
+[2025-09-08 13:00] FROM: Uber | Your ride cost $18.50.
+[2025-09-10 12:45] FROM: FreshGrocer | Delivery confirmed. Charge: $95.60.
+[2025-09-12 19:30] FROM: DoorDash | Order from BurgerKing ($32.40) is here.
+[2025-09-14 09:00] FROM: BankAlert | Debit $45.00 for GYM MEMBERSHIP.
+[2025-09-15 14:00] FROM: AppleStore | Receipt: $1,299.00 for MACBOOK AIR.
+[2025-09-15 14:05] FROM: BankAlert | Large Transaction Alert: $1,299.00 at APPLE. Reply NO if fraud.
+[2025-09-18 10:30] FROM: BankAlert | Debit $40.00 at SHELL GAS.
+[2025-09-20 22:00] FROM: BankAlert | Debit $60.00 at DOWNTOWN BAR.
+[2025-09-22 11:15] FROM: Amazon | Auto-shipment charge: $25.00.
+[2025-09-25 08:00] FROM: PowerComp | Electric bill $98.00 paid.
+[2025-09-28 17:45] FROM: BankAlert | ATM Withdrawal $100.00.
+[2025-09-29 12:30] FROM: ChaseBank | Low Balance Alert: Balance is $1,150.00.
+[2025-09-30 15:00] FROM: PayPal | You sent $50.00 to friend@email.com.
+
+---------- OCTOBER 2025 ----------
+[2025-10-01 09:00] FROM: BankAlert | Direct Deposit $3,000.00.
+[2025-10-02 10:00] FROM: Landlord | Received $1,200 for October rent.
+[2025-10-03 12:15] FROM: BankAlert | Debit $11.99 SPOTIFY.
+[2025-10-05 18:45] FROM: FreshGrocer | Charge $130.20 for weekly groceries.
+[2025-10-07 08:30] FROM: BankAlert | Debit $8.50 at STARBUCKS #404.
+[2025-10-08 19:00] FROM: UberEats | Order total $45.00 from Thai Spice.
+[2025-10-10 14:00] FROM: Amazon | Order #554 shipped. Total $55.99 (Halloween Costume).
+[2025-10-12 09:10] FROM: BankAlert | Debit $12.00 at STARBUCKS #404.
+[2025-10-14 09:15] FROM: BankAlert | Debit $9.75 at STARBUCKS #404.
+[2025-10-15 15:30] FROM: PowerComp | Bill $85.00 paid.
+[2025-10-18 20:00] FROM: Cinema | Tickets purchased: $30.00.
+[2025-10-20 11:00] FROM: AWS | Billing Alert: $35.40 charged to card.
+[2025-10-22 17:30] FROM: ChaseBank | You spent $75.00 at WHOLE FOODS.
+[2025-10-25 23:00] FROM: Uber | Ride to Concert. Total: $24.00.
+[2025-10-26 01:30] FROM: Uber | Ride home. Total: $35.00 (Surge pricing).
+[2025-10-28 13:00] FROM: BankAlert | Debit $45.00 GYM MEMBERSHIP.
+[2025-10-30 12:00] FROM: CVS | Receipt for $15.50 (Candy).
+[2025-10-31 23:59] FROM: BankAlert | Debit $120.00 at HALLOWEEN_BAR.
+
+---------- NOVEMBER 2025 ----------
+[2025-11-01 09:00] FROM: BankAlert | Direct Deposit $3,100.00 (Bonus included).
+[2025-11-03 10:00] FROM: BankAlert | Debit $1,200.00 for RENT_NOV.
+[2025-11-04 14:00] FROM: DeltaAir | Flight booked! $450.00 charged.
+[2025-11-05 18:30] FROM: FreshGrocer | Groceries delivered: $105.00.
+[2025-11-07 08:15] FROM: BankAlert | Debit $6.50 at STARBUCKS.
+[2025-11-10 12:00] FROM: Verizon | Auto-pay $65.00 processed.
+[2025-11-12 19:45] FROM: DoorDash | Order total $29.99 from TacoBell.
+[2025-11-14 10:30] FROM: Amazon | Holiday Gift order: $89.00 charged.
+[2025-11-15 15:00] FROM: BankAlert | Debit $45.00 GYM.
+[2025-11-18 16:20] FROM: ChaseBank | Purchase $60.00 at SHELL GAS.
+[2025-11-20 13:00] FROM: BankAlert | Debit $15.99 NETFLIX.
+[2025-11-22 20:00] FROM: Ticketmaster | Event tickets: $150.00.
+[2025-11-24 11:00] FROM: Uber | Trip fare: $19.50.
+[2025-11-25 10:00] FROM: BankAlert | Debit $11.99 SPOTIFY.
+[2025-11-27 18:00] FROM: ChaseBank | Spending Alert: $120.50 at TARGET SUPERSTORE (Black Friday).
+[2025-11-28 09:30] FROM: Steam | Game purchase: $49.99.
+[2025-11-29 14:00] FROM: BankAlert | ATM Withdrawal $50.00.
+[2025-11-30 21:00] FROM: UberEats | Late night snack: $22.00.

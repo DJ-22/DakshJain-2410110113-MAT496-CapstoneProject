@@ -1,0 +1,82 @@
+ACCOUNT SUMMARY: CHECKING #99887766
+PERIOD: 01-AUG-2025 TO 30-NOV-2025
+
+DATE        | DESCRIPTION                  | DEBIT (-)  | CREDIT (+) | BALANCE
+-------------------------------------------------------------------------------
+01-AUG-2025 | OPENING BALANCE              |            |            | 4,500.00
+01-AUG-2025 | EMPLOYER PAYROLL             |            | 3,000.00   | 7,500.00
+02-AUG-2025 | TRANSFER TO LANDLORD (RENT)  | 1,200.00   |            | 6,300.00
+03-AUG-2025 | SHELL GAS STATION            | 45.50      |            | 6,254.50
+05-AUG-2025 | FRESH GROCER ONLINE          | 112.45     |            | 6,142.05
+07-AUG-2025 | JOE'S PIZZA                  | 35.00      |            | 6,107.05
+08-AUG-2025 | VERIZON WIRELESS             | 65.00      |            | 6,042.05
+10-AUG-2025 | NETFLIX.COM                  | 15.99      |            | 6,026.06
+12-AUG-2025 | AMAZON MARKETPLACE           | 89.99      |            | 5,936.07
+14-AUG-2025 | UBER EATS                    | 28.50      |            | 5,907.57
+15-AUG-2025 | CITY POWER COMPANY           | 120.45     |            | 5,787.12
+18-AUG-2025 | IRON PUMP GYM                | 45.00      |            | 5,742.12
+19-AUG-2025 | CVS PHARMACY                 | 12.50      |            | 5,729.62
+20-AUG-2025 | TICKETMASTER                 | 210.00     |            | 5,519.62
+22-AUG-2025 | TRADER JOES                  | 55.00      |            | 5,464.62
+24-AUG-2025 | AMC THEATRES                 | 18.00      |            | 5,446.62
+25-AUG-2025 | STRIPE TRANSFER (FREELANCE)  |            | 500.00     | 5,946.62
+28-AUG-2025 | LYFT RIDES                   | 22.50      |            | 5,924.12
+29-AUG-2025 | STARBUCKS COFFEE             | 6.75       |            | 5,917.37
+30-AUG-2025 | SPOTIFY PREMIUM              | 11.99      |            | 5,905.38
+-------------------------------------------------------------------------------
+01-SEP-2025 | EMPLOYER PAYROLL             |            | 3,000.00   | 8,905.38
+02-SEP-2025 | TRANSFER TO LANDLORD (RENT)  | 1,200.00   |            | 7,705.38
+04-SEP-2025 | UNIVERSITY BOOKSTORE         | 250.00     |            | 7,455.38
+05-SEP-2025 | VERIZON WIRELESS             | 65.00      |            | 7,390.38
+07-SEP-2025 | TARGET STORE                 | 120.00     |            | 7,270.38
+08-SEP-2025 | UBER TRIP                    | 18.50      |            | 7,251.88
+10-SEP-2025 | FRESH GROCER ONLINE          | 95.60      |            | 7,156.28
+12-SEP-2025 | DOORDASH*BURGERKING          | 32.40      |            | 7,123.88
+14-SEP-2025 | IRON PUMP GYM                | 45.00      |            | 7,078.88
+15-SEP-2025 | APPLE STORE RETAIL           | 1,299.00   |            | 5,779.88
+18-SEP-2025 | SHELL GAS STATION            | 40.00      |            | 5,739.88
+20-SEP-2025 | DOWNTOWN BAR & GRILL         | 60.00      |            | 5,679.88
+22-SEP-2025 | AMAZON PRIME SUB             | 25.00      |            | 5,654.88
+25-SEP-2025 | CITY POWER COMPANY           | 98.00      |            | 5,556.88
+28-SEP-2025 | ATM WITHDRAWAL               | 100.00     |            | 5,456.88
+29-SEP-2025 | CHIPOTLE MEXICAN GRILL       | 14.50      |            | 5,442.38
+30-SEP-2025 | PAYPAL TRANSFER              | 50.00      |            | 5,392.38
+30-SEP-2025 | SPOTIFY PREMIUM              | 11.99      |            | 5,380.39
+-------------------------------------------------------------------------------
+01-OCT-2025 | EMPLOYER PAYROLL             |            | 3,000.00   | 8,380.39
+02-OCT-2025 | TRANSFER TO LANDLORD (RENT)  | 1,200.00   |            | 7,180.39
+03-OCT-2025 | SPOTIFY PREMIUM              | 11.99      |            | 7,168.40
+05-OCT-2025 | FRESH GROCER ONLINE          | 130.20     |            | 7,038.20
+07-OCT-2025 | STARBUCKS #404               | 8.50       |            | 7,029.70
+08-OCT-2025 | UBER EATS                    | 45.00      |            | 6,984.70
+10-OCT-2025 | AMAZON MARKETPLACE           | 55.99      |            | 6,928.71
+12-OCT-2025 | STARBUCKS #404               | 12.00      |            | 6,916.71
+14-OCT-2025 | STARBUCKS #404               | 9.75       |            | 6,906.96
+15-OCT-2025 | CITY POWER COMPANY           | 85.00      |            | 6,821.96
+18-OCT-2025 | REGAL CINEMAS                | 30.00      |            | 6,791.96
+20-OCT-2025 | AMAZON WEB SERVICES          | 35.40      |            | 6,756.56
+22-OCT-2025 | WHOLE FOODS MARKET           | 75.00      |            | 6,681.56
+25-OCT-2025 | UBER TRIP                    | 24.00      |            | 6,657.56
+26-OCT-2025 | UBER TRIP                    | 35.00      |            | 6,622.56
+28-OCT-2025 | IRON PUMP GYM                | 45.00      |            | 6,577.56
+30-OCT-2025 | CVS PHARMACY                 | 15.50      |            | 6,562.06
+31-OCT-2025 | HALLOWEEN_BAR                | 120.00     |            | 6,442.06
+-------------------------------------------------------------------------------
+01-NOV-2025 | EMPLOYER PAYROLL             |            | 3,100.00   | 9,542.06
+03-NOV-2025 | TRANSFER TO LANDLORD (RENT)  | 1,200.00   |            | 8,342.06
+04-NOV-2025 | DELTA AIRLINES               | 450.00     |            | 7,892.06
+05-NOV-2025 | FRESH GROCER ONLINE          | 105.00     |            | 7,787.06
+07-NOV-2025 | STARBUCKS COFFEE             | 6.50       |            | 7,780.56
+10-NOV-2025 | VERIZON WIRELESS             | 65.00      |            | 7,715.56
+12-NOV-2025 | DOORDASH*TACOBELL            | 29.99      |            | 7,685.57
+14-NOV-2025 | AMAZON MARKETPLACE           | 89.00      |            | 7,596.57
+15-NOV-2025 | IRON PUMP GYM                | 45.00      |            | 7,551.57
+18-NOV-2025 | SHELL GAS STATION            | 60.00      |            | 7,491.57
+20-NOV-2025 | NETFLIX.COM                  | 15.99      |            | 7,475.58
+22-NOV-2025 | TICKETMASTER                 | 150.00     |            | 7,325.58
+24-NOV-2025 | UBER TRIP                    | 19.50      |            | 7,306.08
+25-NOV-2025 | SPOTIFY PREMIUM              | 11.99      |            | 7,294.09
+27-NOV-2025 | TARGET SUPERSTORE            | 120.50     |            | 7,173.59
+28-NOV-2025 | STEAM GAMES                  | 49.99      |            | 7,123.60
+29-NOV-2025 | ATM WITHDRAWAL               | 50.00      |            | 7,073.60
+30-NOV-2025 | UBER EATS                    | 22.00      |            | 7,051.60
