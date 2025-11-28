@@ -1,0 +1,7 @@
+langchain
+openai
+chromadb
+langgraph
+matplotlib
+pandas
+python-dotenv

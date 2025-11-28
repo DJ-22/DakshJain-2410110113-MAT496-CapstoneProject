@@ -43,7 +43,7 @@ I chose this project as it is very creative; it doesn't only summarize the data 
 
 I plan to execute these steps to complete my project.
 
-- **[TODO]** **Step 1** involves setting up the project.
+- **[DONE]** **Step 1** involves setting up the project.
   - Forking the template repository
   - Installing LangChain, LangGraph, LangSmith and a Vector Database
   - Setting up API keys
