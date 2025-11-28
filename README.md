@@ -49,7 +49,7 @@ I plan to execute these steps to complete my project.
   - Setting up API keys
 - **[DONE] Step 2** involves preparing sample financial data.
   - Generate sample dataset for someone's financial spendings
-- **[TODO] Step 3** involves building the input and OCR.
+- **[DONE] Step 3** involves building the input and OCR.
   - Create nodes for input, OCR and cleaning the input
 - **[TODO] Step 4** involves building the extraction system.
   - Write extraction prompts with few examples to test validity

@@ -5,3 +5,6 @@ langgraph
 matplotlib
 pandas
 python-dotenv
+pytesseract
+pillow
+pdf2image
