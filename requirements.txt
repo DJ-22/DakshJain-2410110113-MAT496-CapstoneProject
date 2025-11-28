@@ -8,3 +8,5 @@ python-dotenv
 pytesseract
 pillow
 pdf2image
+jsonschema
+pytest

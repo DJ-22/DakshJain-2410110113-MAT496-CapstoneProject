@@ -1,0 +1,51 @@
+Task: Extract financial transactions from the provided text and return ONLY a JSON array of objects following the exact JSON schema below. 
+If a field is missing in the text, you may infer it from common knowledge. 
+Examples:
+- Starbucks → category: "Food & Drink", description: "coffee"
+- Dominos → category: "Food & Drink", description: "pizza"
+- Netflix → category: "Entertainment", description: "subscription"
+- Uber → category: "Transport", description: "ride"
+If you cannot infer, then set description to "unknown".
+
+Rules:
+- Dates must be in YYYY-MM-DD format.
+- Amounts must be numeric. 
+- Debit amounts should be negative; credit amounts positive.
+- A string containing "$" or "USD" indicates USD amounts.
+
+JSON Schema:
+{"$ref": "schema/transaction_schema.json"}
+
+Examples:
+
+Text:
+"2025-09-05 - $25 debited via Venmo to Starbucks for coffee"
+Output:
+[{
+  "date": "2025-09-05",
+  "amount": -25,
+  "currency": "USD",
+  "merchant": "Starbucks",
+  "category": "Food & Drink",
+  "description": "coffee",
+  "source": "Venmo",
+  "type": "debit"
+}]
+
+Text:
+"Salary credited 2025-09-10 for $5000"
+Output:
+[{
+  "date": "2025-09-10",
+  "amount": 5000,
+  "currency": "USD",
+  "merchant": "Employer",
+  "category": "Income",
+  "description": "salary",
+  "source": "bank",
+  "type": "credit"
+}]
+
+====INPUT====
+{raw_text}
+====END====
