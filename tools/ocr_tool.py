@@ -2,8 +2,8 @@ from pypdf import PdfReader
 from pathlib import Path
 
 def ocr_file(path):
-    """
-    Perform OCR on the given file path and return the extracted text.
+    """ 
+    Perform OCR on the given file path.
     """
     
     p = Path(path)
