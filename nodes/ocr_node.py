@@ -1,17 +1,21 @@
-import pytesseract
-from PIL import Image
-import pdf2image
+from pathlib import Path
+from tools.ocr_tool import ocr_file
+from state.input_state import State
 
-class OCRNode:
+def run_ocr(s: State):
     """
-    Node to perform OCR on PDF files.
+    Run OCR on the raw files and update the state with the OCR output.
     """
     
-    def run(self, pdf_path):
-        pages = pdf2image.convert_from_path(pdf_path)
-        text = ""
-
-        for p in pages:
-            text += pytesseract.image_to_string(p)
-
-        return {"ocr_text": text}
+    out = {}
+    
+    for f in s.raw_files:
+        ext = Path(f).suffix.lower()
+        if ext in ['.pdf', '.png', '.jpg', '.jpeg', '.tiff']:
+            out[f] = ocr_file(f)
+        else:
+            out[f] = Path(f).read_text(encoding='utf-8',errors='ignore')
+    
+    s.ocr_output = out
+    
+    return s

@@ -51,7 +51,7 @@ I plan to execute these steps to complete my project.
   - Generate sample dataset for someone's financial spendings
 - **[DONE] Step 3** involves building the input and OCR.
   - Create nodes for input, OCR and cleaning the input
-- **[DONE] Step 4** involves building the extraction system.
+- **[TODO] Step 4** involves building the extraction system.
   - Write extraction prompts with few examples to test validity
   - Create schema validation
 - **[TODO] Step 5** involves setting up semantic search.
