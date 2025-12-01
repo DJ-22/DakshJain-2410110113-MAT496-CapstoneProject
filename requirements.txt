@@ -10,3 +10,5 @@ pillow
 pdf2image
 jsonschema
 pytest
+python-poppler
+pypdf
