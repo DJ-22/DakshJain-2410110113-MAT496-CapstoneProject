@@ -12,3 +12,4 @@ jsonschema
 pytest
 python-poppler
 pypdf
+sentence-transformers

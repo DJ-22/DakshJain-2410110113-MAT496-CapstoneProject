@@ -54,7 +54,7 @@ I plan to execute these steps to complete my project.
 - **[DONE] Step 4** involves building the extraction system.
   - Write extraction prompts with few examples to test validity
   - Create schema validation
-- **[TODO] Step 5** involves setting up semantic search.
+- **[DONE] Step 5** involves setting up semantic search.
   - Generate embeddings
   - Set up the Vector Database
   - Verify queries return right matches
