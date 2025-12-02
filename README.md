@@ -64,7 +64,7 @@ I plan to execute these steps to complete my project.
 - **[DONE] Step 7** involves implementing budgeting logic.
   - Define a budget schema
   - Build budget node to compute total spend, category wise spending etc.
-- **[TODO] Step 8** involves implementing visual chart creation.
+- **[DONE] Step 8** involves implementing visual chart creation.
   - Create trend aggregation node
   - Implement the node to create visual charts
 - **[TODO] Step 9** involves designing LangGraph structure.
