@@ -94,7 +94,7 @@ I plan to execute these steps to complete my project.
 
 ## Conclusion
 
-[https://drive.google.com/file/d/1iYaG2rfTc4QvHXxFauVcTGtOBu8jjUSw/view?usp=sharing]()
+[https://drive.google.com/file/d/1ci1gWnT3YXuuMw7519sEYLRwK1ovjqht/view?usp=sharing]()
 
 This project successfully demonstrates the practical application of Large Language Models and LangGraph to solve real-world financial management challenges. The **AI-Powered Personal Finance ChatBot** effectively transforms unstructured financial data from bank statements and SMS logs into actionable insights through a sophisticated multi-stage pipeline involving OCR, semantic search, RAG, and intelligent budgeting.
 
