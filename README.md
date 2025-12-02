@@ -94,6 +94,8 @@ I plan to execute these steps to complete my project.
 
 ## Conclusion
 
+[https://drive.google.com/file/d/1iYaG2rfTc4QvHXxFauVcTGtOBu8jjUSw/view?usp=sharing]()
+
 This project successfully demonstrates the practical application of Large Language Models and LangGraph to solve real-world financial management challenges. The **AI-Powered Personal Finance ChatBot** effectively transforms unstructured financial data from bank statements and SMS logs into actionable insights through a sophisticated multi-stage pipeline involving OCR, semantic search, RAG, and intelligent budgeting.
 
 The implementation showcases usage of all MAT496 course concepts including prompting strategies, structured output generation, semantic search, RAG pipelines, tool calling, and LangGraph orchestration. Each processing stage is implemented as a modular node with TypedDict state management, ensuring maintainability and scalability.
