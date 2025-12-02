@@ -67,7 +67,7 @@ I plan to execute these steps to complete my project.
 - **[DONE] Step 8** involves implementing visual chart creation.
   - Create trend aggregation node
   - Implement the node to create visual charts
-- **[TODO] Step 9** involves designing LangGraph structure.
+- **[DONE] Step 9** involves designing LangGraph structure.
   - Define state to track user preferences, budgets, extracted transactions etc.
 - **[TODO] Step 10** involves building all LangGraph nodes.
   - Input & OCR
