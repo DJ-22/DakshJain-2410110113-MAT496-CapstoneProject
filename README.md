@@ -58,7 +58,7 @@ I plan to execute these steps to complete my project.
   - Generate embeddings
   - Set up the Vector Database
   - Verify queries return right matches
-- **[TODO] Step 6** involves building RAG pipeline.
+- **[DONE] Step 6** involves building RAG pipeline.
   - Implement retrieval nodes and a reasoning node
   - Add source citation
 - **[TODO] Step 7** involves implementing budgeting logic.
