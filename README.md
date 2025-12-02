@@ -61,7 +61,7 @@ I plan to execute these steps to complete my project.
 - **[DONE] Step 6** involves building RAG pipeline.
   - Implement retrieval nodes and a reasoning node
   - Add source citation
-- **[TODO] Step 7** involves implementing budgeting logic.
+- **[DONE] Step 7** involves implementing budgeting logic.
   - Define a budget schema
   - Build budget node to compute total spend, category wise spending etc.
 - **[TODO] Step 8** involves implementing visual chart creation.
