@@ -69,7 +69,7 @@ I plan to execute these steps to complete my project.
   - Implement the node to create visual charts
 - **[DONE] Step 9** involves designing LangGraph structure.
   - Define state to track user preferences, budgets, extracted transactions etc.
-- **[TODO] Step 10** involves building all LangGraph nodes.
+- **[DONE] Step 10** involves building all LangGraph nodes.
   - Input & OCR
   - Cleaning
   - Extraction
