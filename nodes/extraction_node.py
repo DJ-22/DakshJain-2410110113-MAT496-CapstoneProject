@@ -99,52 +99,81 @@ def _guess_currency(text: str) -> Optional[str]:
 
 def _parse_bank_row(line: str) -> Optional[Dict]:
     """
-    Parse a single bank statement row line.
+    Parse a single bank statement row line (robust to trailing balance column).
     """
-
+    
     cols = [c.strip() for c in line.split('|')]
     if len(cols) < 2:
-        return None
-    
-    date_tok = cols[0]
+        cols = [c.strip() for c in line.split()]
+
+    date_tok = cols[0] if cols else None
     date = _normalize_date_token(date_tok)
     desc = cols[1] if len(cols) > 1 else None
-    debit = credit = None
-    
-    for c in cols[2:]:
-        if not c:
-            continue
 
-        amt_match = _AMOUNT_RE.search(c)
-        if not amt_match:
-            num_match = re.search(r'[\d,]+\.\d{2}', c)
-            if num_match:
-                val = _clean_number_token(num_match.group(0))
-
-                if re.search(r'cr|credit|\+', c, re.I):
-                    credit = val
-                else:
-                    debit = val
-            
+    numeric_cols = []
+    for idx, c in enumerate(cols[2:], start=2):
+        if re.search(r'\b(BAL|BALANCE|AVAIL|AVAILBAL)\b', c, re.I):
             continue
         
-        val = _clean_number_token(amt_match.group(0))
-        if re.search(r'cr\b|credit|\+', c, re.I):
-            credit = val
+        m = _AMOUNT_RE.search(c)
+        if m:
+            val = _clean_number_token(m.group(0))
+            if val is not None:
+                numeric_cols.append((idx, val, c))
         else:
-            debit = val
+            m2 = re.search(r'[\d,]+\.\d{2}', c)
+            if m2:
+                val = _clean_number_token(m2.group(0))
+                if val is not None:
+                    numeric_cols.append((idx, val, c))
 
+    debit = credit = None
     amount = None
+
+    if not numeric_cols:
+        m = _AMOUNT_RE.search(line)
+        if m:
+            amount = _clean_number_token(m.group(0))
+    else:
+        if len(numeric_cols) == 1:
+            _, val, coltxt = numeric_cols[0]
+            if re.search(r'\bCR\b|\bCREDIT\b|\+\b', coltxt, re.I):
+                credit = val
+            else:
+                debit = val
+        else:
+            found = False
+            for idx, val, coltxt in numeric_cols:
+                if re.search(r'\bCR\b|\bCREDIT\b|\+\b', coltxt, re.I):
+                    credit = val
+                    found = True
+                    break
+            
+            if not found:
+                if len(numeric_cols) >= 2:
+                    candidates = numeric_cols[:-1]
+                    for idx, val, coltxt in candidates:
+                        if re.search(r'\bDR\b|\bDEBIT\b|\-', coltxt, re.I):
+                            debit = val
+                            break
+                    
+                    if debit is None:
+                        idx_sel, val_sel, _ = candidates[-1]
+                        debit = val_sel
+                else:
+                    debit = numeric_cols[0][1]
+
     if debit is not None:
         amount = debit
     elif credit is not None:
         amount = credit
-    else:
+
+    if amount is None:
         m = _AMOUNT_RE.search(line)
         if m:
             amount = _clean_number_token(m.group(0))
 
-    currency = _guess_currency(line) or 'USD'  
+    currency = _guess_currency(line) or 'USD'
 
     return {
         "date": date,
