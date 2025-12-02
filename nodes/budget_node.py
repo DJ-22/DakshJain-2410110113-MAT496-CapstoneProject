@@ -25,62 +25,81 @@ def _default_map():
     }
 
 def _cat_from_vendor_kw(vendor: Optional[str], cmap: Dict[str, List[str]]) -> str:
+    """ 
+    Categorize vendor based on keyword mapping.
+    """
+    
     if not vendor:
         return "other"
+    
     s = vendor.lower()
     for cat, kws in cmap.items():
         for kw in kws:
             if kw and kw in s:
                 return cat
+   
     return "other"
 
 def _ym_from_date(d: Optional[str]) -> str:
+    """ 
+    Extract year-month from date string.
+    """
+    
     if not d:
         return "unknown"
+    
     try:
         return d[:7]
     except Exception:
         return "unknown"
 
 def run_budget(s, budget_cfg: Optional[Dict[str, float]] = None, cmap: Optional[Dict[str, List[str]]] = None, use_llm: bool = True) -> Any:
+    """ 
+    Analyze budget based on extracted transactions in state s.
+    """
+    
     txns = getattr(s, "extracted", []) or []
+    
     if cmap is None:
         cmap = _default_map()
     if budget_cfg is None:
         budget_cfg = {}
 
-    # first pass: keyword mapping and collect unmapped vendors
     vendor_map = {}
     unmapped = set()
+    
     for t in txns:
         vendor = (t.get("vendor") or t.get("desc") or "").strip()
         cat = _cat_from_vendor_kw(vendor, cmap)
         vendor_map[vendor] = cat
+        
         if cat == "other" and vendor:
             unmapped.add(vendor)
 
-    # try LLM classification for unmapped vendors (cached)
     if use_llm and classify_vendors_with_cache is not None and unmapped:
         try:
             mapping = classify_vendors_with_cache(list(unmapped))
+            
             for v, c in mapping.items():
                 vendor_map[v] = c or vendor_map.get(v, "other")
         except Exception:
             pass
 
-    # aggregation
     cat_tot = defaultdict(float)
     month_tot = defaultdict(float)
     month_cat = defaultdict(lambda: defaultdict(float))
     cnt = 0
+    
     for t in txns:
         amt = t.get("amount")
         if amt is None:
             continue
+       
         try:
             a = float(amt)
         except Exception:
             continue
+        
         vendor = (t.get("vendor") or t.get("desc") or "").strip()
         cat = vendor_map.get(vendor, "other")
         ym = _ym_from_date(t.get("date"))
@@ -90,11 +109,12 @@ def run_budget(s, budget_cfg: Optional[Dict[str, float]] = None, cmap: Optional[
         cnt += 1
 
     top_c = Counter(cat_tot).most_common(5)
-
     violations = []
+    
     for ym, cats in month_cat.items():
         for cat, val in cats.items():
             limit = budget_cfg.get(cat)
+            
             if limit is None:
                 continue
             if val > limit:
@@ -115,9 +135,9 @@ def run_budget(s, budget_cfg: Optional[Dict[str, float]] = None, cmap: Optional[
         "violations": violations
     }
 
-    # optional LLM summary
     summary = None
     recs = []
+    
     if use_llm and summarize_budget is not None:
         try:
             payload = {
@@ -140,4 +160,5 @@ def run_budget(s, budget_cfg: Optional[Dict[str, float]] = None, cmap: Optional[
     s.budget_vendor_map = vendor_map
     s.budget_report = summary_text
     s.budget_recommendations = recs
+   
     return s

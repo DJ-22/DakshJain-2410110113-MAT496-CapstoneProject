@@ -1,4 +1,5 @@
 from typing import Any, Dict, Optional
+import os
 from langgraph.graph import StateGraph, END
 
 try:
@@ -137,3 +138,47 @@ def run_finance_pipeline(data_dir: Optional[str] = "data",
     _log("pipeline:end")
     
     return report
+
+
+def run_pipeline(data_dir: str = "data", 
+                budget_cfg: Optional[Dict[str, float]] = None,
+                use_llm: bool = True,
+                query: Optional[str] = None,
+                top_k: int = 3) -> GraphState:
+    """
+    Run the complete financial document processing pipeline step-by-step.
+    """
+
+    state = read_inputs(data_dir)
+    print(f"[1] read_inputs -> files: {len(state.raw_files)}")
+
+    state = run_ocr(state)
+    print(f"[2] run_ocr -> ocr_output keys: {len(state.ocr_output)}")
+
+    state = clean_text(state)
+    print(f"[3] clean_text -> sms blocks: {len(state.clean_text.get('sms', []))}, bank blocks: {len(state.clean_text.get('bank', []))}")
+
+    state = run_extract(state)
+    print(f"[4] run_extract -> extracted_count: {state.extracted_count}")
+
+    state = run_embeddings(state)
+    print(f"[5] run_embeddings -> embedded_count: {state.embedded_count}")
+
+    if query:
+        res = run_retrieval(state, query, top_k=top_k)
+        print(f"\n[6] Retrieval sample for query: '{query}' -> {len(res)} results")
+        for r in res:
+            m = r.get("meta", {})
+            print(" -", m.get("txn_id"), "|", m.get("vendor"), "|", m.get("amount"))
+
+    if use_llm and not os.getenv("OPENAI_API_KEY"):
+        print("Warning: use_llm=True but OPENAI_API_KEY not found, setting use_llm=False")
+        use_llm = False
+    
+    state = run_budget(state, budget_cfg=budget_cfg, use_llm=use_llm)
+
+    state = build_trends(state)
+
+    state = make_charts(state, out_dir="data/charts", top_n=5)
+    
+    return state

@@ -6,9 +6,9 @@ def _ym(d: Optional[str]) -> str:
         return "unknown"
     return d[:7]
 
-def build_trends(s) -> Dict[str, Any]:
+def build_trends(s):
     """
-    Build trend data from extracted transactions in s.
+    Build trend data from extracted transactions in state s.
     """
     
     txns = getattr(s, "extracted", []) or []
@@ -62,6 +62,11 @@ def build_trends(s) -> Dict[str, Any]:
         "monthly_totals": {m: round(month_tot[m],2) for m in months},
         "top_categories": top
     }
-    s.trend_data = out
+
+    try:
+        s.trend_data = out
+    except (AttributeError, TypeError):
+        if isinstance(s, dict):
+            s["trend_data"] = out
     
-    return out
+    return s

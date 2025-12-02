@@ -81,19 +81,21 @@ I plan to execute these steps to complete my project.
   - Trend Analysis
   - Chart generation
   - Final Formatting
-- **[TODO] Step 11** involves testing the model thoroughly.
+- **[DONE] Step 11** involves testing the model thoroughly.
   - Test with large monthly statements
   - Different queries
-- **[TODO] Step 12** involves debugging with LangSmith.
+- **[DONE] Step 12** involves debugging with LangSmith.
   - Setup tracing for all nodes
-- **[TODO] Step 13** involves polishing the final output.
+- **[DONE] Step 13** involves polishing the final output.
   - Setup JSON schema
-- **[TODO] Step 14** involves writing documentation.
+- **[DONE] Step 14** involves writing documentation.
   - Document each node
   - Complete README for entire explanation of the code
 
 ## Conclusion
 
-[Pending upon completion]
+This project successfully demonstrates the practical application of Large Language Models and LangGraph to solve real-world financial management challenges. The **AI-Powered Personal Finance ChatBot** effectively transforms unstructured financial data from bank statements and SMS logs into actionable insights through a sophisticated multi-stage pipeline involving OCR, semantic search, RAG, and intelligent budgeting.
+
+The implementation showcases usage of all MAT496 course concepts including prompting strategies, structured output generation, semantic search, RAG pipelines, tool calling, and LangGraph orchestration. Each processing stage is implemented as a modular node with TypedDict state management, ensuring maintainability and scalability.
 
 ---

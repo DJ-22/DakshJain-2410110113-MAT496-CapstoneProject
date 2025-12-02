@@ -156,7 +156,6 @@ def run_rag(
     fallback = [r.get("meta") or {} for r in retrieved[:min(3, len(retrieved))]]
 
     if parsed_json:
-        # use JSON "answer" as final answer (trust model-produced JSON)
         answer_text = parsed_json.get("answer", "").strip()
     else:
         answer_text = out_text

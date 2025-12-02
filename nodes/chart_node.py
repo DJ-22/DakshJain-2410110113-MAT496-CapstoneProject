@@ -42,9 +42,10 @@ def save_bar_chart(x: List[str], heights: List[float], out_path: Path, title: st
     plt.savefig(str(out_path))
     plt.close()
 
-def make_charts(s, out_dir: str = "data/charts", top_n: int = 5) -> Dict[str, str]:
+def make_charts(s, out_dir: str = "data/charts", top_n: int = 5):
     """ 
     Generate and save charts based on trend data in s.
+    Returns the state object with chart_paths set.
     """
 
     p = Path(out_dir)
@@ -52,7 +53,8 @@ def make_charts(s, out_dir: str = "data/charts", top_n: int = 5) -> Dict[str, st
 
     td = getattr(s, "trend_data", None)
     if td is None:
-        td = build_trends(s)
+        s = build_trends(s)
+        td = getattr(s, "trend_data", None)
 
     months = td.get("months", [])
     monthly_totals = [td["monthly_totals"].get(m, 0.0) for m in months]
@@ -71,6 +73,10 @@ def make_charts(s, out_dir: str = "data/charts", top_n: int = 5) -> Dict[str, st
         save_bar_chart(months, monthly_totals, fname2, title="Total spending per month")
         out["monthly_totals"] = str(fname2)
 
-    s.chart_paths = out
+    try:
+        s.chart_paths = out
+    except (AttributeError, TypeError):
+        if isinstance(s, dict):
+            s["chart_paths"] = out
     
-    return out
+    return s
