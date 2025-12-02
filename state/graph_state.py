@@ -1,50 +1,72 @@
-# state/graph_state.py
-from typing import List, Dict, Any, Optional
+from typing import TypedDict, Optional, Dict, List, Any
 
-class GraphState:
-    # basic inputs
-    raw_files: List[str]
-    # OCR and cleaned text
-    ocr_output: Dict[str, str]
-    clean_text: Dict[str, List[str]]       # {"sms":[...], "bank":[...]}
-    # extraction
-    extracted: List[Dict[str, Any]]
+
+class GraphState(TypedDict, total=False):
+    """
+    Central state object passed between LangGraph nodes.
+    """
+
+    raw_files: List[str]                   
+    claim: Optional[str]                   
+    context: Optional[str]                   
+
+    ocr_output: Dict[str, str]             
+    clean_text: Dict[str, List[str]]        
+
+    extracted: List[Dict[str, Any]]        
     extracted_count: int
-    # embeddings/index
-    indexed_ids: List[str]
+
+    indexed_ids: List[str]                  
     embedded_count: int
-    vector_store_info: Dict[str, Any]
-    # retrieval/rag
-    last_query: Optional[Dict[str, Any]]
-    last_rag: Optional[Dict[str, Any]]
-    # budget / trend / charts
-    budget_config_used: Dict[str, float]
-    budget_results: Dict[str, Any]
-    budget_category_map: Dict[str, List[str]]
-    budget_vendor_map: Dict[str, str]
-    trend_data: Dict[str, Any]
-    chart_paths: Dict[str, str]
-    # meta / debugging
-    logs: List[str]
+    vector_store_info: Dict[str, Any]     
 
-    def __init__(self):
-        self.raw_files = []
-        self.ocr_output = {}
-        self.clean_text = {}
-        self.extracted = []
-        self.extracted_count = 0
-        self.indexed_ids = []
-        self.embedded_count = 0
-        self.vector_store_info = {}
-        self.last_query = None
-        self.last_rag = None
-        self.budget_config_used = {}
-        self.budget_results = {}
-        self.budget_category_map = {}
-        self.budget_vendor_map = {}
-        self.trend_data = {}
-        self.chart_paths = {}
-        self.logs = []
+    last_query: Dict[str, Any]           
+    last_rag: Dict[str, Any]               
+    retrieved_docs: List[Dict[str, Any]]    
 
-    def log(self, msg: str):
-        self.logs.append(msg)
+    budget_config_used: Dict[str, float]     
+    budget_results: Dict[str, Any]           
+    budget_category_map: Dict[str, List[str]]#
+    budget_vendor_map: Dict[str, str]        
+    budget_report: Optional[str]             
+    budget_recommendations: List[str]       
+
+    trend_data: Dict[str, Any]              
+    chart_paths: Dict[str, str]             
+
+    logs: List[str]                          
+    extra: Dict[str, Any]                    
+
+
+def initialize_state(raw_files: Optional[List[str]] = None,
+                     claim: Optional[str] = None,
+                     context: Optional[str] = None) -> GraphState:
+    """
+    Initialize a GraphState with default values.
+    """
+    
+    return GraphState({
+        "raw_files": raw_files or [],
+        "claim": claim,
+        "context": context,
+        "ocr_output": {},
+        "clean_text": {"sms": [], "bank": []},
+        "extracted": [],
+        "extracted_count": 0,
+        "indexed_ids": [],
+        "embedded_count": 0,
+        "vector_store_info": {},
+        "last_query": {},
+        "last_rag": {},
+        "retrieved_docs": [],
+        "budget_config_used": {},
+        "budget_results": {},
+        "budget_category_map": {},
+        "budget_vendor_map": {},
+        "budget_report": None,
+        "budget_recommendations": [],
+        "trend_data": {},
+        "chart_paths": {},
+        "logs": [],
+        "extra": {},
+    })
